@@ -22,10 +22,14 @@ int [] petri = new int[] {1,5,2,6,1,3,4,6};
 
 int [] petriExpanded = ArrayAlgorithms.petriPropagation(petri);
 
-Array.ForEach(petriExpanded, Console.WriteLine);
+Array.ForEach(petriExpanded, (petri)=> {
+    Console.Write(petri.ToString() + " ");
+});
 
-
-
-
-
+Console.WriteLine(" ");
+petriExpanded = new int[0];
+ArrayAlgorithms.petriPropagation(petriExpanded);
+petriExpanded = null;
+ArrayAlgorithms.petriPropagation(petriExpanded);
+Console.WriteLine("## Ended petri ##");
 

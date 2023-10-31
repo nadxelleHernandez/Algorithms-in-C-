@@ -3,6 +3,11 @@ using System.Collections;
 namespace Algorithms {
     class ArrayAlgorithms {
         public static int[] petriPropagation(int []petri) {
+            if(petri == null || petri.Length==0) {
+                Console.WriteLine("ERROR: Petri array provided was empty or null");
+                return null;
+            }
+
             Stack <int> biggest = new Stack<int>();
             int last = petri.Length -1;
             biggest.Push(petri[last]);
